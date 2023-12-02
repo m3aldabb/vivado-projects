@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Dec  2 02:44:21 2023
+# Process ID: 12812
+# Current directory: C:/Users/14168/vivado-workspace/projects/fifo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent832 C:\Users\14168\vivado-workspace\projects\fifo\fifo_1.xpr
+# Log file: C:/Users/14168/vivado-workspace/projects/fifo/vivado.log
+# Journal file: C:/Users/14168/vivado-workspace/projects/fifo\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/14168/vivado-workspace/projects/fifo/fifo_1.xpr
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/14168/vivado-workspace/projects/fifo/fifo.srcs/constrs_1/imports/zybo/ZYBO_Master.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 C:/Users/14168/vivado-workspace/projects/fifo/fifo.srcs/constrs_1/imports/zybo/ZYBO_Master.xdc

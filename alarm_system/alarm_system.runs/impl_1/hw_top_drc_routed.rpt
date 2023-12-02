@@ -1,0 +1,107 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Dec  2 03:20:29 2023
+| Host         : mdxps15 running 64-bit major release  (build 9200)
+| Command      : report_drc -file hw_top_drc_routed.rpt -pb hw_top_drc_routed.pb -rpx hw_top_drc_routed.rpx
+| Design       : hw_top
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 13
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| PDRC-153    | Warning  | Gated clock check                                           | 8          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 4          |
+| ZPS7-1      | Warning  | PS7 block required                                          | 1          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-153#1 Warning
+Gated clock check  
+Net genblk1[0].debounce_0/clk_divider_0/slow_clk is a gated clock net sourced by a combinational pin genblk1[0].debounce_0/clk_divider_0/q_i_1/O, cell genblk1[0].debounce_0/clk_divider_0/q_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net genblk1[0].debounce_0/edge_detect_0/FSM_onehot_next_state_reg[4]_i_2_n_0 is a gated clock net sourced by a combinational pin genblk1[0].debounce_0/edge_detect_0/FSM_onehot_next_state_reg[4]_i_2/O, cell genblk1[0].debounce_0/edge_detect_0/FSM_onehot_next_state_reg[4]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net genblk1[1].debounce_0/clk_divider_0/slow_clk is a gated clock net sourced by a combinational pin genblk1[1].debounce_0/clk_divider_0/q_i_1__0/O, cell genblk1[1].debounce_0/clk_divider_0/q_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net genblk1[1].debounce_0/edge_detect_0/FSM_onehot_next_state_reg[4]_i_2__0_n_0 is a gated clock net sourced by a combinational pin genblk1[1].debounce_0/edge_detect_0/FSM_onehot_next_state_reg[4]_i_2__0/O, cell genblk1[1].debounce_0/edge_detect_0/FSM_onehot_next_state_reg[4]_i_2__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net genblk1[2].debounce_0/clk_divider_0/slow_clk is a gated clock net sourced by a combinational pin genblk1[2].debounce_0/clk_divider_0/q_i_1__1/O, cell genblk1[2].debounce_0/clk_divider_0/q_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net genblk1[2].debounce_0/edge_detect_0/FSM_onehot_next_state_reg[4]_i_2__1_n_0 is a gated clock net sourced by a combinational pin genblk1[2].debounce_0/edge_detect_0/FSM_onehot_next_state_reg[4]_i_2__1/O, cell genblk1[2].debounce_0/edge_detect_0/FSM_onehot_next_state_reg[4]_i_2__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Gated clock check  
+Net genblk1[3].debounce_0/clk_divider_0/slow_clk is a gated clock net sourced by a combinational pin genblk1[3].debounce_0/clk_divider_0/q_i_1__2/O, cell genblk1[3].debounce_0/clk_divider_0/q_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Gated clock check  
+Net genblk1[3].debounce_0/edge_detect_0/FSM_onehot_next_state_reg[4]_i_2__2_n_0 is a gated clock net sourced by a combinational pin genblk1[3].debounce_0/edge_detect_0/FSM_onehot_next_state_reg[4]_i_2__2/O, cell genblk1[3].debounce_0/edge_detect_0/FSM_onehot_next_state_reg[4]_i_2__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT genblk1[0].debounce_0/clk_divider_0/q_i_1 is driving clock pin of 3 cells. This could lead to large hold time violations. Involved cells are:
+genblk1[0].debounce_0/dff_0/q_reg, genblk1[0].debounce_0/dff_1/q_reg, genblk1[0].debounce_0/dff_2/q_reg
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT genblk1[1].debounce_0/clk_divider_0/q_i_1__0 is driving clock pin of 3 cells. This could lead to large hold time violations. Involved cells are:
+genblk1[1].debounce_0/dff_0/q_reg, genblk1[1].debounce_0/dff_1/q_reg, genblk1[1].debounce_0/dff_2/q_reg
+Related violations: <none>
+
+PLHOLDVIO-2#3 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT genblk1[2].debounce_0/clk_divider_0/q_i_1__1 is driving clock pin of 3 cells. This could lead to large hold time violations. Involved cells are:
+genblk1[2].debounce_0/dff_0/q_reg, genblk1[2].debounce_0/dff_1/q_reg, genblk1[2].debounce_0/dff_2/q_reg
+Related violations: <none>
+
+PLHOLDVIO-2#4 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT genblk1[3].debounce_0/clk_divider_0/q_i_1__2 is driving clock pin of 3 cells. This could lead to large hold time violations. Involved cells are:
+genblk1[3].debounce_0/dff_0/q_reg, genblk1[3].debounce_0/dff_1/q_reg, genblk1[3].debounce_0/dff_2/q_reg
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+

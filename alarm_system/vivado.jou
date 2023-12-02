@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Dec  2 03:06:16 2023
+# Process ID: 22428
+# Current directory: C:/Users/14168/vivado-workspace/projects/alarm_system
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11532 C:\Users\14168\vivado-workspace\projects\alarm_system\alarm_system.xpr
+# Log file: C:/Users/14168/vivado-workspace/projects/alarm_system/vivado.log
+# Journal file: C:/Users/14168/vivado-workspace/projects/alarm_system\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/14168/vivado-workspace/projects/alarm_system/alarm_system.xpr
+file mkdir C:/Users/14168/vivado-workspace/projects/alarm_system/alarm_system.srcs/sources_1/new
+close [ open C:/Users/14168/vivado-workspace/projects/alarm_system/alarm_system.srcs/sources_1/new/top.sv w ]
+add_files C:/Users/14168/vivado-workspace/projects/alarm_system/alarm_system.srcs/sources_1/new/top.sv
+update_compile_order -fileset sources_1
+close [ open C:/Users/14168/vivado-workspace/projects/alarm_system/alarm_system.srcs/sources_1/new/edge_detect.sv w ]
+add_files C:/Users/14168/vivado-workspace/projects/alarm_system/alarm_system.srcs/sources_1/new/edge_detect.sv
+close [ open C:/Users/14168/vivado-workspace/projects/alarm_system/alarm_system.srcs/sources_1/new/alarm_system.sv w ]
+add_files C:/Users/14168/vivado-workspace/projects/alarm_system/alarm_system.srcs/sources_1/new/alarm_system.sv
+close [ open C:/Users/14168/vivado-workspace/projects/alarm_system/alarm_system.srcs/sources_1/new/dff.sv w ]
+add_files C:/Users/14168/vivado-workspace/projects/alarm_system/alarm_system.srcs/sources_1/new/dff.sv
+close [ open C:/Users/14168/vivado-workspace/projects/alarm_system/alarm_system.srcs/sources_1/new/clk_divider.sv w ]
+add_files C:/Users/14168/vivado-workspace/projects/alarm_system/alarm_system.srcs/sources_1/new/clk_divider.sv
+update_compile_order -fileset sources_1
+close [ open C:/Users/14168/vivado-workspace/projects/alarm_system/alarm_system.srcs/sources_1/new/debounce.sv w ]
+add_files C:/Users/14168/vivado-workspace/projects/alarm_system/alarm_system.srcs/sources_1/new/debounce.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/14168/vivado-workspace/projects/alarm_system/alarm_system.runs/impl_1/hw_top.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/14168/vivado-workspace/projects/alarm_system/alarm_system.runs/impl_1/hw_top.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]

@@ -1,0 +1,75 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Dec  2 03:02:01 2023
+| Host         : mdxps15 running 64-bit major release  (build 9200)
+| Command      : report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
+| Design       : top
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 7
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| PDRC-153    | Warning  | Gated clock check                                           | 4          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 2          |
+| ZPS7-1      | Warning  | PS7 block required                                          | 1          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-153#1 Warning
+Gated clock check  
+Net debounce_rd/clk_divider_0/slow_clk is a gated clock net sourced by a combinational pin debounce_rd/clk_divider_0/q_i_1__0/O, cell debounce_rd/clk_divider_0/q_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net debounce_rd/edge_detect_0/FSM_onehot_next_state_reg[4]_i_2__0_n_0 is a gated clock net sourced by a combinational pin debounce_rd/edge_detect_0/FSM_onehot_next_state_reg[4]_i_2__0/O, cell debounce_rd/edge_detect_0/FSM_onehot_next_state_reg[4]_i_2__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net debounce_wr/clk_divider_0/slow_clk is a gated clock net sourced by a combinational pin debounce_wr/clk_divider_0/q_i_1/O, cell debounce_wr/clk_divider_0/q_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net debounce_wr/edge_detect_0/FSM_onehot_next_state_reg[4]_i_2_n_0 is a gated clock net sourced by a combinational pin debounce_wr/edge_detect_0/FSM_onehot_next_state_reg[4]_i_2/O, cell debounce_wr/edge_detect_0/FSM_onehot_next_state_reg[4]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT debounce_rd/clk_divider_0/q_i_1__0 is driving clock pin of 3 cells. This could lead to large hold time violations. Involved cells are:
+debounce_rd/dff_0/q_reg, debounce_rd/dff_1/q_reg, debounce_rd/dff_2/q_reg
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT debounce_wr/clk_divider_0/q_i_1 is driving clock pin of 3 cells. This could lead to large hold time violations. Involved cells are:
+debounce_wr/dff_0/q_reg, debounce_wr/dff_1/q_reg, debounce_wr/dff_2/q_reg
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+
